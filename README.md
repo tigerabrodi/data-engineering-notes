@@ -56,3 +56,23 @@ Online Analytical Processing (OLAP) is like a manager analyzing the store's sale
    - **Simplifying Data Models**: Changing the complex OLTP model into a simpler format that's easier for analysis. This might involve organizing the data into fewer, larger categories, which is easier to work with for big-picture analysis.
 
 **Common OLAP Data Models**: The simplified data models often used in OLAP are called snowflake, star, activity, or OBT schemas. These models are like taking a complex puzzle and rearranging it so that it's easier to see the whole picture at once.
+
+# Data Integrity checks
+
+1. **Null Checks**: These are used to see how much of the data in a column is missing (null). If there's too much missing data, it could be a sign of a problem.
+
+2. **Anomaly Checks**: These checks look for unusual changes in the data. For example, if a table suddenly has a lot more rows than usual, it might indicate an issue.
+
+3. **Category Checks**: These ensure that data in specific fields makes sense. For instance, a field for U.S. states should only contain valid state names. If something else shows up, it's flagged as an error.
+
+4. **Uniqueness Check**: This is important to prevent duplicate data. When combining data from different sources, it's crucial to ensure that the same information isn't counted twice.
+
+5. **Aggregate Checks**: These checks are about the big picture – they look at overall totals and counts to make sure nothing major is missing or incorrectly added after all the data processing is done.
+
+# Batch Processing and Streaming
+
+**Batch Processing**: This is like setting up a regular schedule for handling data. Imagine a bus that leaves every hour or once a day, carrying all the data collected up to that point. In batch processing, data is collected over a period (an hour, a day, etc.) and then processed all at once according to a set schedule. It's useful when real-time data updating isn't critical. For example, if you only need daily reports on sales data, batch processing is efficient and straightforward.
+
+**Streaming**: This is like a continuous flow of data, similar to a live broadcast. In streaming, data is processed immediately as it arrives. It’s like having a continuous conveyor belt that constantly brings in and processes data. This method is essential for situations where you need to react to data in real-time, like monitoring live user interactions on a website. Streaming is more complex and requires more resources but provides up-to-the-minute data processing.
+
+**Choosing Between Them**: The decision on whether to use batch processing or streaming depends on your needs. If your data doesn't need to be up-to-the-minute and is used for periodic reports, batch processing is suitable. But if you require immediate data analysis, like for instant decision-making or real-time user interaction, streaming is the way to go. It's all about how quickly you need to process and use your data.
