@@ -76,3 +76,11 @@ Online Analytical Processing (OLAP) is like a manager analyzing the store's sale
 **Streaming**: This is like a continuous flow of data, similar to a live broadcast. In streaming, data is processed immediately as it arrives. It’s like having a continuous conveyor belt that constantly brings in and processes data. This method is essential for situations where you need to react to data in real-time, like monitoring live user interactions on a website. Streaming is more complex and requires more resources but provides up-to-the-minute data processing.
 
 **Choosing Between Them**: The decision on whether to use batch processing or streaming depends on your needs. If your data doesn't need to be up-to-the-minute and is used for periodic reports, batch processing is suitable. But if you require immediate data analysis, like for instant decision-making or real-time user interaction, streaming is the way to go. It's all about how quickly you need to process and use your data.
+
+# Data Warehouses
+
+A data warehouse is like a large storage facility for data. It's a central location where data from multiple sources is stored and organized. This makes it easier to access and analyze the data. Data warehouses are designed to handle large amounts of data and provide fast access to it. They're also optimized for analytical queries, which means they can quickly process complex calculations and provide insights from the data.
+
+# Data Lakes
+
+A data lake is like a large pool of raw data. It's a central location where data from multiple sources is stored in its original format. They are cheaper in terms of data storage and computation.
